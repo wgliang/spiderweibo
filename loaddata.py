@@ -45,8 +45,14 @@ def get_content(toUrl):
 
 
 def pacomment(r):
-    for i in range(1,1000):
-        url = "http://weibo.cn/1642591402/DkvG94NL8?type=comment&page=" + str(i)
+    for i in range(1,8):
+	#url = "http://weibo.cn/1654203637/DrZXk2azj?type=comment&page=" + str(i)
+        #url = "http://weibo.cn/1774800467/Ds7lNwFGy?type=comment&page=" + str(i)
+        #url = "http://weibo.cn/1642634100/Ds06sephF?type=comment&page=" + str(i)
+        #url = "http://weibo.cn/1642634100/Ds80qAazZ?type=comment&page=" + str(i)
+        #url = "http://weibo.cn/1671342103/DrZNhuh06?type=comment&page=" + str(i)
+        #url = "http://weibo.cn/1901447125/DrZZpcsKQ?type=comment&page=" + str(i)
+        url = "http://weibo.cn/1864419143/Ds0a1wrQ8?type=comment&page=" + str(i)
         print url
         content = get_content(url)
         if content == None:
@@ -87,8 +93,8 @@ def pacomment(r):
             data8srcr =  tdata8src.find('</span>')
             data8src  = tdata8src[:data8srcr]
             comments = '{ cid:'+cid +', uid:'+uid+', uname:'+uname+', cont:'+cont+', data8src:'+data8src + '}'
-            r.lpush('zhengshuang-comments', comments)
-            r.lpush('comments-zhengshuang', cont)
+            r.lpush('papi-comments', comments)
+            r.lpush('comments-papi', cont)
             print cid,uid,uname,cont,data8src
 
 def main():

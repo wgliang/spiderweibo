@@ -8,7 +8,6 @@ import sys
 from bs4 import BeautifulSoup
 import time
 import re
-import MySQLdb
 import redis
 
 homePage = 'http://weibo.cn/'
@@ -46,8 +45,37 @@ def get_content(toUrl):
 
 
 def pacomment(r):
-    for i in range(1,10):
-        url = "http://weibo.cn/1642634100/Dl9ETwUNb?type=comment&page=" + str(i)
+    for i in range(1,21):
+        #url = "http://weibo.cn/1642634100/Dl9ETwUNb?type=comment&page=" + str(i)
+        #url = "http://weibo.cn/1642634100/Dm4R54EIJ?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dm4XWf6Hi?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dm56PkBsQ?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dm5jyB2JM?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dm5HIbl3R?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dm9JdsvgP?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DmavYleKT?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DmaNHzQnM?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DmbLN8IeH?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dmm099C2u?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dmnd5qYVh?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dmnj40gBB?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DmnxMt43N?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DmnAqaUpu?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dmo6g4KIw?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DmoqSDjVJ?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DmslAhUT3?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DlsoREBjg?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dlsq0hgdX?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DlssYno7L?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dlt5b2BFY?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DlCbf7ZYE?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DlCcT3X2T?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DlV4fwtVQ?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/DlXtB3HUf?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dm40eD6bP?filter=hot&type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dl9ETwUNb?type=comment&page=" + str(i)
+	#url = "http://weibo.cn/1642634100/Dlgyl393t?type=comment&page=" + str(i)
+	url = "http://weibo.cn/1642634100/DlpvAqCrP?type=comment&page=" + str(i)
         print url
         content = get_content(url)
         if content == None:
